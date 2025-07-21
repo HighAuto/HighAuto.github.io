@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGH AUTOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for specific brand colors and font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-custom-blue {
+            background-color: #5DA9C2; /* A specific shade of blue */
+        }
+        .text-custom-blue {
+            color: #5DA9C2;
+        }
+        .border-custom-blue {
+            border-color: #5DA9C2;
+        }
+        /* Ensure images are responsive within their containers */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Custom class for the fancy font for the "Buy from us today!" button */
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom class for the fancy font for the selected text */
+        .font-lora {
+            font-family: 'Lora', serif;
+        }
+
+        /* New styles for the background image with faintness */
+        .section-with-faint-bg {
+            position: relative; /* Needed for absolute positioning of pseudo-element */
+            overflow: hidden; /* Ensures background doesn't bleed outside */
+        }
+
+        .section-with-faint-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Removed background-image property */
+            opacity: 0; /* Set opacity to 0 to make it completely invisible if content is still there */
+            z-index: -1; /* Puts the background behind the content */
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header class="bg-black text-white p-6 md:p-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="bg-white rounded-full h-24 w-25 flex items-center justify-center mr-4 overflow-hidden">
+                    <img src="https://i.imgur.com/yqZ1tHh.jpeg" alt="HIGH AUTOS Logo" class="h-full w-full object-contain">
+                </div>
+                <h1 class="text-2xl md:text-3xl font-bold tracking-wider">HIGH AUTOS</h1>
+            </div>
+            <div class="text-center md:text-right">
+                <h2 class="text-2xl md:text-3xl font-bold">Let's find your perfect car.</h2>
+                <p class="text-sm text-gray-400 mt-2">At HIGH AUTOS we don't just sell cars but we give you the best.</p>
+                <a href="tel:+2348123456789" class="inline-block border border-white rounded-full py-2 px-6 mt-4 hover:bg-white hover:text-black transition duration-300">Contact us now</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 md:py-24 px-6">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
+            <h3 class="text-2xl md:text-3xl font-bold mb-6">Welcome to HIGH AUTOS.</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                At HIGH AUTOS we don't just deal in cars, we drive dreams, deliver trust and redefine mobility. A car dealership company that specializes in selling foreign used cars and brand new cars.
+            </p>
+        </div>
+    </section>
+
+    <section id="cars" class="bg-custom-blue py-16 md:py-24 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Our cars are always available for our customers.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://i.imgur.com/hjqWDCH.jpeg" alt="Toyota Camry" class="w-full h-56 object-cover">
+                    <div class="p-6 text-left">
+                        <h3 class="font-bold text-xl mb-2">2019 Toyota Camry</h3>
+                        <p class="text-gray-600 text-sm">The 2019 Toyota Camry is a well-rounded midsize sedan that offers a comfortable ride, spacious interior, and a choice of capable engines.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://i.imgur.com/x40MIrK.jpeg" alt="Mercedes C300" class="w-full h-56 object-cover">
+                    <div class="p-6 text-left">
+                        <h3 class="font-bold text-xl mb-2">2020 Mercedes C300</h3>
+                        <p class="text-gray-600 text-sm">The 2020 Mercedes-Benz C300 boasts a luxurious cabin, a smooth ride, and powerful engine options, making it a top contender in its class.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://i.imgur.com/Kg6x8cB.jpeg" alt="Mercedes-Benz GLE" class="w-full h-56 object-cover">
+                    <div class="p-6 text-left">
+                        <h3 class="font-bold text-xl mb-2">2017 Mercedes-Benz GLE</h3>
+                        <p class="text-gray-600 text-sm">The 2017 Mercedes-Benz GLE offers a plush interior, a range of powerful engines, and a comfortable ride, making it a great choice for a luxury midsize SUV.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="bg-black text-white py-16 md:py-24 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">See what our clients have to say</h2>
+                    <div class="space-y-6">
+                        <p class="italic">"I had a great experience buying my car from HIGH AUTOS. The staff was friendly and knowledgeable, and they helped me find the perfect car for my needs and budget."</p>
+                        <p class="italic">"They have a very good customer service and they are very reliable. Every word they said concerning the car was what I saw. I'm enjoying my car."</p>
+                        <p class="italic">"I'm so glad I chose HIGH AUTOS. They made the car buying process so easy and stress-free. I would definitely recommend them to anyone looking for a new or used car."</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://i.imgur.com/eCP86k9.jpeg" alt="Client with car" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strong System Section: Emphasizing reliable service without background image -->
+    <section class="py-16 md:py-24 px-6 section-with-faint-bg">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight">A strong car system makes things happen.</h2>
+            </div>
+            <div class="md:w-1/2">
+                <p class="text-lg text-gray-700 leading-relaxed font-lora">Just like how we sell you with a solid machine, we run our customers a solid system too.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-custom-blue text-white py-16 md:py-24 px-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <br><h3 class="font-bold text-2xl mb-4 text-black font-playfair">Contact Us:</h3><br>
+                <div class="mt-8">
+                    <h4 class="font-bold text-lg text-black">CONNECT WITH US:</h4>
+                    <div class="flex justify-center md:justify-start space-x-4 mt-2">
+                        <a href="#" class="hover:text-black text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-black text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-black text-2xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="mt-2 text-lg">@high_autos</p>
+                </div>
+            </div>
+            <div class="mt-8 md:mt-0">
+                <h4 class="font-bold text-lg">Address</h4>
+                <p class="mt-2 text-base">Plot 24, Opposite Market Junction, Rumuomasi, Port Harcourt, Rivers State.</p>
+                <h4 class="font-bold text-lg mt-6">Phone Number</h4>
+                <a href="tel:+2348123456789" class="inline-block text-base mt-2 text-white hover:text-black transition duration-300">
+                    +234 812 345 6789
+                </a>
+            </div>
+            <div class="flex items-center justify-center md:justify-end mt-8 md:mt-0">
+                <a href="mailto:info@highautos.com" class="inline-block border-2 border-white rounded-lg py-3 px-8 hover:bg-white hover:text-custom-blue transition duration-300 font-semibold text-center font-playfair">
+                    Buy from us today!
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
